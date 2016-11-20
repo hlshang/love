@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
-	<title>Our Story</title>
+    <title>Our Story</title>
     <link type="text/css" rel="stylesheet" href="./src/default.css">
-	<script type="text/javascript" src="./src/jquery.min.js"></script>
-	<script type="text/javascript" src="./src/jscex.min.js"></script>
-	<script type="text/javascript" src="./src/jscex-parser.js"></script>
-	<script type="text/javascript" src="./src/jscex-jit.js"></script>
-	<script type="text/javascript" src="./src/jscex-builderbase.min.js"></script>
-	<script type="text/javascript" src="./src/jscex-async.min.js"></script>
-	<script type="text/javascript" src="./src/jscex-async-powerpack.min.js"></script>
-	<script type="text/javascript" src="./src/functions.js" charset="utf-8"></script>
-	<script type="text/javascript" src="./src/love.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./src/jquery.min.js"></script>
+    <script type="text/javascript" src="./src/jscex.min.js"></script>
+    <script type="text/javascript" src="./src/jscex-parser.js"></script>
+    <script type="text/javascript" src="./src/jscex-jit.js"></script>
+    <script type="text/javascript" src="./src/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./src/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./src/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./src/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./src/love.js" charset="utf-8"></script>
 </head>
 <body>
         <!-- 音频开始 -->
-		<audio autoplay="autopaly">
-			<source src="src/Love.mp3" type="audio/mp3" />
-		</audio>
+        <audio autoplay="autopaly">
+            <source src="src/Love.mp3" type="audio/mp3" />
+        </audio>
         <!-- 音频结束 -->
         <div id="main">
             <div id="error">
@@ -26,30 +26,31 @@
             </div>
             <div id="wrap">
                 <div id="text">
-			        <div id="code">
-			        	<span class="say">* 我们的故事</span><br>
-						<span class="say"> </span><br>
-                        <span class="say">从花田里相识, 或许是缘分，或许是注定的。</span><br>
-						<span class="say"> </span><br>
-			        	<span class="say">以后不管有怎么样，我都会在。</span><br>
-						<span class="say"> </span><br>
-			        	<span class="say">就算全世界都都抛弃你，记得还有我。</span><br>
-						<span class="say"> </span><br>
-			        	<span class="say">再累都不用害怕，因为你有我。</span><br>
-						<span class="say"> </span><br>
-			        	<span class="say">记得在你最需要的时候想起我。</span><br>
-						<span class="say"> </span><br>
-			        	<span class="say">我会一直陪着你。</span><br>
+                    <div id="code">
+                        <span class="say">* 我们的故事</span><br>
+                        <span class="say"> </span><br>
+                        <span class="say">与妳相识, 或许是缘分，或许是注定的。
+</span><br>
+                        <span class="say"> </span><br>
+                        <span class="say">以后不管有怎么样，我都会在。</span><br>
+                        <span class="say"> </span><br>
+                        <span class="say">就算全世界都都抛弃你，记得还有我。</span><br>
+                        <span class="say"> </span><br>
+                        <span class="say">再累都不用害怕，因为你有我。</span><br>
+                        <span class="say"> </span><br>
+                        <span class="say">记得在你最需要的时候想起我。</span><br>
+                        <span class="say"> </span><br>
+                        <span class="say">我会一直陪着你。</span><br>
                         <span class="say"></span><br>
-                        <span class="say">这个冬天并不寒冷，我想是我遇见了你 </span><br>
+                        <span class="say">这个夏天异常美丽，我想是我遇见了你  </span><br>
                         <span class="say"></span><br>
                         <span class="say">You are my only girl..永远..</span><br>
-						<span class="say"> </span><br>
-                        <span class="say"><span class="space"></span><span class="space"></span> -- 商洪亮--</span>
-			        </div>
+                        <span class="say"> </span><br>
+                        <span class="say"><span class="space"></span><span class="space"></span> -- 亮哥--</span>
+                    </div>
                 </div>
                 <div id="clock-box">
-                    商洪亮  <span class="STYLE1">与</span> 郭志磊<span class="STYLE1">已经相识了</span>
+                    哥哥  <span class="STYLE1">与</span> 硕宝<span class="STYLE1">已经相识了</span>
                     <div id="clock"></div>
                 </div>
                 <canvas id="canvas" ></canvas>
@@ -62,7 +63,7 @@
     (function(){
         //获取画板
         var canvas = $('#canvas');
-		//画板不可用显示提示
+        //画板不可用显示提示
         if (!canvas[0].getContext) {
             $("#error").show();
             return false;
@@ -150,14 +151,14 @@
 
         var growAnimate = eval(Jscex.compile("async", function () {
             do {
-    	        tree.grow();
+                tree.grow();
                 $await(Jscex.Async.sleep(10));
             } while (tree.canGrow());
         }));
 
         var flowAnimate = eval(Jscex.compile("async", function () {
             do {
-    	        tree.flower(2);
+                tree.flower(2);
                 $await(Jscex.Async.sleep(10));
             } while (tree.canFlower());
         }));
@@ -189,13 +190,13 @@
         }));
         //文本动画
         var textAnimate = eval(Jscex.compile("async", function () {
-		    var together = new Date();
-		    together.setFullYear(2015, 11, 10); 			//时间年月日
-		    together.setHours(18);						//小时	
-		    together.setMinutes(53);					//分钟
-		    together.setSeconds(0);					//秒前一位
-		    together.setMilliseconds(2);				//秒第二位
-		    $("#code").show().typewriter();
+            var together = new Date();
+            together.setFullYear(2016, 04, 09);             //时间年月日
+            together.setHours(18);                      //小时    
+            together.setMinutes(53);                    //分钟
+            together.setSeconds(0);                 //秒前一位
+            together.setMilliseconds(2);                //秒第二位
+            $("#code").show().typewriter();
             $("#clock-box").fadeIn(500);
             while (true) {
                 timeElapse(together);
